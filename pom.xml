@@ -63,12 +63,14 @@
         <artifactId>spring-boot-maven-plugin</artifactId> 
       </plugin>
       <plugin>
-        <groupId>io.fabric8</groupId>
-        <artifactId>fabric8-maven-plugin</artifactId> 
-        <version>${fuse.bom.version}</version>
+    	  <groupId>io.fabric8</groupId>
+      		<artifactId>fabric8-maven-plugin</artifactId>
+      		<configuration>
+        		<jolokiaUrl>http://someServer:8181/jolokia</jolokiaUrl>
+      		</configuration>
       </plugin>
       
-       <plugin>
+      <plugin>
                 <groupId>org.jboss.redhat-fuse</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
                 <version>${jboss-transaction-spi.version}</version>
